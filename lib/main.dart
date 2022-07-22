@@ -13,7 +13,12 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
+Color w = Colors.white;
+Color b = Colors.black;
+
 class _MyAppState extends State<MyApp> {
+  bool isSwitched = false;
+
   int _questionIndex = 0;
   int _totalScore = 0;
 
@@ -29,9 +34,6 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _questionIndex += 1;
     });
-    print("$_totalScore");
-    print("$_questionIndex");
-    print("Answer Chosen !");
   }
 
   final List<Map<String, Object>> _questions = [
@@ -78,9 +80,34 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Quiz App"),
+          title: Text(
+            "Quiz App",
+            style: TextStyle(color: b),
+          ),
+          actions: <Widget>[
+            Switch(
+              value: isSwitched,
+              onChanged: (value) {
+                setState(() {
+                  isSwitched = value;
+
+                  if (isSwitched) {
+                    b = Colors.white;
+                    w = Colors.black;
+                  } else {
+                    b = Colors.black;
+                    w = Colors.white;
+                  }
+                });
+              },
+              activeColor: b,
+              inactiveThumbColor: b,
+              inactiveTrackColor: b,
+            ),
+          ],
         ),
         body: Container(
+          color: w,
           width: double.infinity,
           child: _questionIndex < _questions.length
               ? Quiz(_questions, _questionIndex, anserQuestion)

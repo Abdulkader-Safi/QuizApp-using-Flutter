@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/main.dart';
 
 class Question extends StatelessWidget {
   final String questionText;
@@ -14,7 +15,10 @@ class Question extends StatelessWidget {
         children: <Widget>[
           Text(
             questionText,
-            style: const TextStyle(fontSize: 30),
+            style: TextStyle(
+              color: b,
+              fontSize: 30,
+            ),
             textAlign: TextAlign.center,
           ),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/main.dart';
 
 class Result extends StatelessWidget {
   final Function() resetQuiz;
@@ -26,6 +27,7 @@ class Result extends StatelessWidget {
           Text(
             "Your Score is",
             style: TextStyle(
+              color: b,
               fontSize: 45,
               fontWeight: FontWeight.bold,
             ),
@@ -33,6 +35,7 @@ class Result extends StatelessWidget {
           Text(
             "$totalScore",
             style: TextStyle(
+              color: b,
               fontSize: 45,
               fontWeight: FontWeight.bold,
             ),
@@ -41,6 +44,7 @@ class Result extends StatelessWidget {
             "$resultPhrase",
             textAlign: TextAlign.center,
             style: TextStyle(
+              color: b,
               fontSize: 25,
               fontWeight: FontWeight.bold,
             ),

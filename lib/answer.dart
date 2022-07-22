@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/main.dart';
 
 class Answer extends StatelessWidget {
   final String answerText;
@@ -12,9 +13,9 @@ class Answer extends StatelessWidget {
       width: double.infinity,
       child: RaisedButton(
         color: Colors.blue,
-        textColor: Colors.white,
-        child: Text(answerText, style: TextStyle(fontSize: 25)),
+        textColor: w,
         onPressed: answerFunction,
+        child: Text(answerText, style: TextStyle(color: b, fontSize: 25)),
       ),
     );
   }

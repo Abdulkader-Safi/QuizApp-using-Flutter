@@ -3,6 +3,8 @@
 My first Project With Flutter.
 
 there in no real qeustion yet, just some filler (like Naruto anime XD)
+your need to change the question answers and score in main.dart if you want to user the project
+you can add more questions or add more answers, the code is dynamic it will read it
 
 ## Getting Started
 
